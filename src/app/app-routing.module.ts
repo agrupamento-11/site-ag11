@@ -1,10 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponentComponent } from './views/layout/not-found-component/not-found-component.component';
+import { HomeComponent } from './views/site/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+      {
+        path: '',
+        loadChildren: () => import('./views/site/site.module').then(m => m.SiteModule)
+    },
+/*
+    {
+        path: '', component: HomeComponent,
+        data: { title: 'Inicio'},
+        children: [
+
+        ]
+    },
+*/
+    {
+        path: '**', 
+        redirectTo: '', 
+        pathMatch: 'full',
+        component: NotFoundComponentComponent
+    }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
