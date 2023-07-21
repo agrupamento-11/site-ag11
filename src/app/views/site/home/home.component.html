@@ -152,179 +152,25 @@
     <section class="contact-section section-padding" id="section_5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-12">
-                    <h2 class="mb-4 pb-2">Lobitos</h2>
+
+                <div class="col-lg-4 col-12" *ngFor="let section of scouts;">
+                    <h2 class="mb-4 pb-2">{{ section.config.title }}</h2>
                     <table class="table">
-                        <thead class="" style="background-color: yellow;">
+                        <thead class="section-{{section.config.color}}">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nome</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lizandra Boa Nova</td>
+                            <tr *ngFor="let scout of section.scouts; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ scout.name }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="col-lg-4 col-12">
-                    <h2 class="mb-4 pb-2">Exploradores</h2>
-
-                    <table class="table">
-                        <thead class="" style="background-color: green;">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Adalberto Tumbula</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-lg-4 col-12">
-                    <h2 class="mb-4 pb-2">Pioneiros</h2>
-
-                    <table class="table">
-                        <thead class="" style="background-color: #0a58ca; color: #fff;">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Victória Sousa</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Francisco Camati</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-lg-4 col-12">
-                    <h2 class="mb-4 pb-2">Caminheiros</h2>
-
-                    <table class="table">
-                        <thead class="" style="background-color: red; color: #fff;">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Secção</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lizandra Boa Nova</td>
-                                <td>Lobita</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jerusa Claudeth</td>
-                                <td>Explorador</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Emílio Malungo</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Victória Sousa</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Francisco Camati</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-lg-4 col-12">
-                    <h2 class="mb-4 pb-2">Voluntários</h2>
-
-                    <table class="table">
-                        <thead class="" style="background-color: #024702; color: #fff;">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Secção</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lizandra Boa Nova</td>
-                                <td>Lobita</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jerusa Claudeth</td>
-                                <td>Explorador</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Emílio Malungo</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Victória Sousa</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Francisco Camati</td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td>Pioneiro</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </section>
