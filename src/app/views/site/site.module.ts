@@ -4,15 +4,22 @@ import { CommonModule } from '@angular/common';
 
 import { SiteRoutingModule } from './site-routing.module';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        SiteRoutingModule
+        SiteRoutingModule,
+        
     ],
+    exports: [
+        FooterComponent
+    ],
+
     declarations: [ 
-        HomeComponent
+        HomeComponent,
+        FooterComponent
     ],
     providers: [
         
