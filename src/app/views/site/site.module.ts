@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SiteRoutingModule } from './site-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
     imports: [
@@ -14,11 +15,13 @@ import { FooterComponent } from './footer/footer.component';
         
     ],
     exports: [
-        FooterComponent
+        FooterComponent,
+        NavbarComponent
     ],
 
     declarations: [ 
         HomeComponent,
+        NavbarComponent,
         FooterComponent
     ],
     providers: [
