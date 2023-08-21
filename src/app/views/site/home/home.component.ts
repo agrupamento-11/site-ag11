@@ -16,25 +16,13 @@ export class HomeComponent implements OnInit {
     constructor(
         private http: HttpClient
     ) {
-        this.loading_data()
+
     }
 
     ngOnInit(): void {
         
     }
 
-
-    loading_data(){
-        this.scouts = this.data_scouts()
-    }
-
-
-    data_scouts(){
-        this.http.get(this.url)
-        .subscribe((res) => {
-            this.scouts = res;
-        }) 
-    } 
 
 
 
