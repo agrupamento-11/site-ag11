@@ -1,6 +1,7 @@
 .text-title {
     font-weight: 300;
     font-size: 50px;
+    font-family: 'ComicNeue-Bold';
 }
 
 .header-title {
@@ -20,4 +21,12 @@
     margin-top: 10vh;
 }
 
-.title-scout {}
+.title-scout {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-family: 'ComicNeue-Bold';
+}
+
+.header-description {
+    font-family: 'ComicNeue-Bold';
+}

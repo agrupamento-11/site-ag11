@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+@font-face {
+    font-family: "ComicNeue-Regular";
+    src: url(/assets/fonts/Comic_Neue/ComicNeue-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: "ComicNeue-Bold";
+    src: url(/assets/fonts/Comic_Neue/ComicNeue-Bold.ttf) format("truetype");
+}
+
+
+
 .defaul-bg {
     background-color: #6c37ad !important;
 }
@@ -11,7 +25,7 @@
 }
 
 .carousel-margin {
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .btn-sm {
