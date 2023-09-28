@@ -6,6 +6,7 @@ import { SiteRoutingModule } from './site-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FaleConnoscoComponentComponent } from './fale-connosco/fale-connosco-component/fale-connosco-component.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     declarations: [ 
         HomeComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        FaleConnoscoComponentComponent
     ],
     providers: [
         
