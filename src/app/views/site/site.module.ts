@@ -6,6 +6,7 @@ import { SiteRoutingModule } from './site-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageOrganismoComponent } from './page-organismo/page-organismo.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     declarations: [ 
         HomeComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        PageOrganismoComponent
     ],
     providers: [
         
