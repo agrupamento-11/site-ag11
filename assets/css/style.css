@@ -643,10 +643,10 @@ body,
 .pagination li span:after, .widget.widget_tag_cloud .tagcloud a:after, .single-service.style--two:after, .pricing-navtab .nav-tabs .nav-link:after, .theme-input-group input, .btn:before, .btn:after,
 .btn span:before,
 .btn span:after, .back-to-top, -thumb.offcanvas-wrapper::-webkit-scrollbar, .coming-soon-content h1 {
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #fb4275), color-stop(100%, #f35d46));
-  background: -webkit-linear-gradient(45deg, #fb4275 0%, #f35d46 100%);
-  background: -o-linear-gradient(45deg, #fb4275 0%, #f35d46 100%);
-  background: linear-gradient(45deg, #fb4275 0%, #f35d46 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #3E1564), color-stop(100%, #7c2ec1c4));
+  background: -webkit-linear-gradient(45deg, #3E1564 0%, #7c2ec1c4 100%);
+  background: -o-linear-gradient(45deg, #3E1564 0%, #7c2ec1c4 100%);
+  background: linear-gradient(45deg, #3E1564 0%, #7c2ec1c4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb4275', endColorstr='#f35d46',GradientType=1);
 }
 
@@ -1314,8 +1314,8 @@ blockquote {
   -o-transition: .3s ease-in-out .2s;
   transition: .3s ease-in-out .2s;
   z-index: 9;
-  color: #fb4275 !important;
-  background-color: rgba(251, 66, 117, 0.1) !important;
+  color: #fff !important;
+  background-color: #79498ba8 !important;
 }
 
 .btn span {
