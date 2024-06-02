@@ -26,19 +26,6 @@ export class AppComponent {
         }
         
         
-        translate.addLangs([
-            'pt-PT', 
-            'en-EN'
-        ])
-
-        let locale = sessionStorage.getItem('locale')
-        
-        if (locale) {
-            translate.setDefaultLang('en-EN')
-            //translate.setDefaultLang(locale)
-        } else {
-            translate.setDefaultLang('pt-PT')
-        }
     }
 
     ngOnInit() {

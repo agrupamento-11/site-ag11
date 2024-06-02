@@ -1,0 +1,11 @@
+.bg-scout-default{
+    background-color: #6e20a01c;
+}
+
+.heading-bg, .btn-inline:after, .header .header-main.style--one .main-menu .offcanvas-trigger span{
+    background-color: #8c2cbf;
+}
+
+.c1, .list-check li i, .theme-input-group button, .btn.btn-white span, .vdo-btn, .section-title h3, .page-title li, .appointment-modal .modal-dialog .modal-content .form-title, .header .header-main.style--one .main-menu #menu-button, .header .header-main.style--one .main-menu .nav li.current-menu-item > a, .header .header-main.style--one .main-menu .nav li.current-menu-parent > a, .header .header-main.style--one .main-menu .nav li ul li:hover > a, .offcanvas-wrapper .offcanvas-content .widget.widget_contact_info .single-info span, .single-blog-style--two .blog-content .post-meta li a:hover, .blog-details .post-meta li a:hover, .blog-details .post-tags li a:hover, .not-found-content p a, .coming-soon-content h1, #countdown li .single-countdown h4, #countdown li.seperator, .single-feature:hover .content h3, .single-process:hover .content h3, .about-nav-tab .nav-tabs .nav-link.active, .single-service .icon, .single-service:hover h4, .service-details .title, .pricing-navtab .nav-tabs .nav-link h4, .project-nav li.active, .single-team-member .team-info h4{
+    color: #8c2cbf;
+}

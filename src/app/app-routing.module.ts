@@ -6,9 +6,9 @@ import { NotFoundComponentComponent } from "./views/layout/not-found-component/n
 export const routes: Routes = [
     {
         path: "",
-        loadChildren: () => 
-            import("./views/auth/auth.module")
-            .then((m) => m.AuthModule),
+        loadChildren: () => import("./views/site/site.module")
+            .then((m) => m.SiteModule
+        )
     },
     {
         path: "",
