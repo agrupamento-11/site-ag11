@@ -1,0 +1,20 @@
+<!-- BEGIN #app -->
+<div id="app" class="app">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+
+  <!-- BEGIN mobile-sidebar-backdrop -->
+  <button
+    class="app-sidebar-mobile-backdrop"
+    data-toggle-target=".app"
+    data-toggle-class="app-sidebar-mobile-toggled"
+    id="backdropM"
+  ></button>
+  <!-- END mobile-sidebar-backdrop -->
+
+  <!-- BEGIN #content -->
+  <div id="content" class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- END #content -->
+</div>

@@ -1,0 +1,121 @@
+<!-- BEGIN #sidebar -->
+<div id="sidebar" class="app-sidebar" style="background-color: #1a232fb3;">
+    <!-- BEGIN scrollbar -->
+    <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+        <!-- BEGIN menu -->
+        <div class="menu">
+            <div class="menu-header">Menu - Navegação</div>
+            <div class="menu-item active padding-side">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-cpu"></i></span>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a
+                    routerLink="/managers/orders/pending"
+                    href="#" 
+                    style="color: #ff9e0b;"
+                    class="menu-link">
+                    <div class="menu-icon">
+                        <i class="bi bi-bag-check"></i>
+                        <span class="w-5px h-5px rounded-3 bg-theme position-absolute top-0 end-0 mt-3px me-3px"></span>
+                    </div>
+                    <span class="menu-text">Enc. Pendentes</span>
+                </a>
+            </div>
+            
+            <div class="menu-item padding-side">
+                <a
+                    routerLink="/managers/orders/confirmed"
+                    href="#" 
+                    class="menu-link">
+                    <div class="menu-icon">
+                        <i class="bi bi-bag-check"></i>
+                        <span class="w-5px h-5px rounded-3 bg-theme position-absolute top-0 end-0 mt-3px me-3px"></span>
+                    </div>
+                    <span class="menu-text">Enc. Confirmadas</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a
+                    routerLink="/managers/orders"
+                    href="#" 
+                    class="menu-link">
+                    <div class="menu-icon">
+                        <i class="bi bi-bag-check"></i>
+                        <span class="w-5px h-5px rounded-3 bg-theme position-absolute top-0 end-0 mt-3px me-3px"></span>
+                    </div>
+                    <span class="menu-text">Todas Encomendas</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a 
+                    routerLink="/managers/costs"
+                    href="#" 
+                    class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-collection"></i></span>
+                    <span class="menu-text">Despesas e Custos</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a 
+                    routerLink="/managers/customers"
+                    href="#" 
+                    class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-people"></i></span>
+                    <span class="menu-text">Clientes</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-pen"></i></span>
+                    <span class="menu-text">Conta Corrente</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a 
+                    routerLink="/reports/orders-by-users"
+                    href="#" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+                    <span class="menu-text">Analise & BI</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-collection"></i></span>
+                    <span class="menu-text">Fornecedores</span>
+                </a>
+            </div>
+
+            <div class="menu-item padding-side">
+                <a 
+                    routerLink="/managers/products"
+                    href="#" 
+                    class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-gem"></i></span>
+                    <span class="menu-text">Productos/Serviços</span>
+                </a>
+            </div>
+        </div>
+        <!-- END menu -->
+        <div class="p-3 px-4 mt-auto">
+            <a 
+                (click)="logOut()"
+                href="#" 
+                class="btn d-block btn-outline-danger">
+                <i class="fa fa-code-branch me-2 ms-n2 opacity-5"></i> Terminar sessão
+            </a>
+        </div>
+    </div>
+    <!-- END scrollbar -->
+</div>
+<!-- END #sidebar -->
+    

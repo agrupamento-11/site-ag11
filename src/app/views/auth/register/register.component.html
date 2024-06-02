@@ -1,0 +1,92 @@
+<body class='pace-top'>
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-full-height app-without-header">
+		<!-- BEGIN login -->
+		<div class="login">
+			<!-- BEGIN login-content -->
+			<div class="login-content">
+                <form [formGroup]="userForm" (submit)="onSubmit();">
+					<h1 class="text-center">Criar conta</h1>
+					<div class="text-white text-opacity-50 text-center mb-4">
+						Esteja sempre ON.
+					</div>
+                    
+					<div class="mb-3">
+						<label class="form-label">
+                            Nome completo<span class="text-danger">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            formControlName="name" 
+                            name="name"
+							class="form-control form-control-lg bg-white bg-opacity-5" 
+                            placeholder="" 
+                            [ngClass]="{ 
+                                'is-invalid': submitted && f.name.errors, 
+                                'is-valid': f.name.touched && !f.name.errors 
+                            }" 
+                        />
+					</div>
+
+                    <div class="mb-3">
+						<label class="form-label">
+                            Nº Telefone<span class="text-danger">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            formControlName="phone_number" 
+                            name="phone_number"
+							class="form-control form-control-lg bg-white bg-opacity-5" 
+                            placeholder="" 
+                            [ngClass]="{ 
+                                'is-invalid': submitted && f.phone_number.errors, 
+                                'is-valid': f.phone_number.touched && !f.phone_number.errors 
+                            }" 
+                        />
+					</div>
+
+                    <div class="mb-3">
+						<label class="form-label">
+                            Senha<span class="text-danger">*</span>
+                        </label>
+                        <input 
+                            type="password" 
+                            formControlName="password" 
+                            name="password"
+							class="form-control form-control-lg bg-white bg-opacity-5" 
+                            placeholder="" 
+                            [ngClass]="{ 
+                                'is-invalid': submitted && f.password.errors, 
+                                'is-valid': f.password.touched && !f.password.errors 
+                            }" 
+                        />
+					</div>
+
+                    <button type="submit" [disabled]="userForm.pristine || userForm.invalid"
+                        class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3">
+                        Registar agora
+                        <spinner [loading]='submitted'></spinner>
+                    </button>
+					
+					<div class="text-center text-white text-opacity-50">
+						Já tem conta? 
+						<a routerLink="/login" href="#">Iniciar sessão</a>.
+					</div>
+
+					<br>
+					<br>
+	
+					<a routerLink="/site/all-products" class="w-100 btn btn btn-lg btn-outline-dark" href="#" role="button">
+						Comprar voucher
+					</a>
+
+				</form>
+			</div>
+			<!-- END login-content -->
+		</div>
+		<!-- END login -->
+		
+	</div>
+	<!-- END #app -->
+	
+</body>

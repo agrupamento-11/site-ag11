@@ -1,0 +1,58 @@
+<body class='pace-top'>
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-full-height app-without-header">
+		<!-- BEGIN login -->
+		<div class="login">
+			<!-- BEGIN login-content -->
+			<div class="login-content">
+				<div >
+					<h1 class="text-center">
+						<img 
+							src="/assets/logo.png" 
+							alt="" 
+							width="300"
+						>
+					</h1>
+
+					<div class="mb-3">
+						<label class="form-label">Nº Telefone <span class="text-danger">*</span></label>
+						<input 
+							[(ngModel)]="user.username" 
+							type="number" 
+							type="text" 
+							name="username" 
+							id="username"
+							class="form-control form-control-lg bg-white bg-opacity-5" 
+							placeholder="" 
+						/>
+					</div>
+					<div class="mb-3">
+						<div class="d-flex">
+							<label class="form-label">Senha <span class="text-danger">*</span></label>
+						</div>
+						<input 
+							[(ngModel)]="user.password"
+							type="number" 
+							type="password" 
+							class="form-control form-control-lg bg-white bg-opacity-5" 
+							placeholder="" 
+						/>
+					</div>
+					
+					<button 
+						(click)="_signIn()" 
+						[disabled]="loading" 
+							type="button" 
+							class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3"
+						>
+						Iniciar sessão
+						<spinner [loading]="loading"></spinner>
+					</button>
+
+					<p class="text-center mt-5">{{ versionApp }}</p>
+
+				</div>
+			</div>
+		</div>		
+	</div>	
+</body>

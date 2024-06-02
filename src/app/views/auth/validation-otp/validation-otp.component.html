@@ -1,0 +1,65 @@
+<body class='pace-top'>
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-full-height app-without-header">
+		<!-- BEGIN login -->
+		<div class="login">
+			<!-- BEGIN login-content -->
+			<div class="login-content">
+				<div >
+					<h1 class="text-center">Validar Nº Telefone</h1>
+
+					<div class="mb-3 mt-5" style="text-align: center;">
+						<label class="form-label">OTP de validação <span class="text-danger">*</span></label>
+
+						<ng-otp-input  
+							(onInputChange)="onOtpChange($event)" 
+							(inputClass)="'otp-input-wrapper'"
+							[config]="{length: 5}"
+						>
+						</ng-otp-input>
+
+					</div>
+                    
+					<button 
+						(click)="_validate_otp()" 
+						[disabled]="loading" 
+							type="button" 
+							class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3"
+						>
+						Validar agora
+						<spinner [loading]="loading"></spinner>
+					</button>
+					
+					<div class="text-center text-white text-opacity-50">
+						<button 
+							(click)="_resend_otp()" 
+							class="btn  mb-3"
+							type="button"
+							>Reenviar código
+						</button>
+					</div>
+
+				</div>
+			</div>
+			<!-- END login-content -->
+		</div>
+		<!-- END login -->
+		
+	</div>
+	<!-- END #app -->
+
+	
+	
+</body>
+
+
+<style>
+	.ng-otp-input-wrapper.wrapper{
+		text-align: center!important
+	}
+
+	.otp-input-wrapper{
+		background-color: #ffffff0d!important
+	}
+
+</style>

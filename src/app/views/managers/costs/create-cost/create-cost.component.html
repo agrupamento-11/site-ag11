@@ -1,0 +1,81 @@
+
+<div class="modal modal-cover fade" id="CreateCostModal" data-bs-backdrop='static'>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form [formGroup]="costForm" (submit)="onSubmit();">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{title}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb-3">
+                                <label class="control-label">{{ 'Selecionar Produto/Serviço' | translate}}</label>
+                                <select 
+                                    formControlName="product_uuid" 
+                                    name="product_uuid" 
+                                    class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.product_uuid.errors, 'is-valid': f.product_uuid.touched && !f.product_uuid.errors }">
+
+                                    <option *ngFor="let product of products" [value]="product.uuid">{{ product.name }} </option>
+                                </select>
+
+                                <div *ngIf="submitted && f['product_uuid'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['product_uuid'].errors.required">{{ 'errors.required' | translate}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="control-label">{{ 'Preço de compra' | translate}}</label>
+                                <input 
+                                    type="text" 
+                                    formControlName="price" 
+                                    name="price" 
+                                    class="form-control"
+                                    placeholder=""
+                                    [ngClass]="{ 'is-invalid': submitted && f.price.errors, 'is-valid': f.price.touched && !f.price.errors }" 
+                                />
+                                <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['price'].errors.required">{{ 'errors.required' | translate}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">{{ 'label.description' | translate}}</label>
+                                <input 
+                                    type="text" 
+                                    formControlName="description" 
+                                    name="description" 
+                                    class="form-control"
+                                    placeholder=""
+                                    [ngClass]="{ 'is-invalid': submitted && f.description.errors, 'is-valid': f.description.touched && !f.description.errors }" 
+                                />
+                                <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['description'].errors.required">{{ 'errors.required' |
+                                        translate}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-sm" type="reset" [disabled]="costForm.pristine && !submitted"
+                        (click)="onReset()">{{ 'btn.clean' | translate}}</button>
+                    <button class="btn btn-success btn-sm mr-1" type="submit" [disabled]="costForm.valid">{{
+                        'btn.validate' | translate}}</button>
+                    <button type="submit" [disabled]="costForm.pristine || costForm.invalid"
+                        class="btn btn-primary btn-sm">{{ 'btn.save' | translate}}
+                        <spinner [loading]='submitted'></spinner>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

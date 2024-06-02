@@ -1,0 +1,183 @@
+<div class="header pb-6 mb-5">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-7">
+                    <h1 class="page-header">
+                        {{ 'Encomendas Confirmadas' | translate }}
+                    </h1>                    
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <!-- Card header -->
+
+                <div class="card-header border-0">
+                    <div class="row align-items-center py-0">
+                        <div class="col-lg-1 p-filter">
+                            <div class="form-group">
+                                <label for="enter_by">Entrada</label>
+                                <select (change)='_onTableDataChange($event)' class="form-control" id="enter_by" name="enter_by"
+                                    [(ngModel)]="_filter.limit">
+                                    <option>10</option>
+                                    <option>20</option>
+                                    <option>30</option>
+                                    <option>50</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                        <div class="col-lg-2 p-filter">
+                            <div class="form-group">
+                                <label for="filter_column">Data Início</label>
+                                <input type="date" name="start_date" id="start_date"
+                                    [(ngModel)]="_filter.start_date" (keyup)="_onTableDataChange($event)"
+                                    placeholder="Pesquisa por ..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 p-filter">
+                            <div class="form-group">
+                                <label for="filter_column">Data Fim</label>
+                                <input type="date" name="end_date" id="end_date"
+                                    [(ngModel)]="_filter.end_date" (keyup)="_onTableDataChange($event)"
+                                    placeholder="Pesquisa por ..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1 p-filter">
+                            <div class="form-group">
+                                <button (click)="_search()" class='btn btn-success mt-4' type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Light table -->
+
+                <div class="table-responsive">
+
+                    <div class="accordion" id="accordionOrders" *ngIf="_ordersService.orders.items">
+                        <div class="row"
+                            *ngFor="let item of _ordersService.orders.items | paginate: {
+                                itemsPerPage: _filter.limit,
+                                currentPage: _filter.page,
+                                totalItems: _ordersService.orders.total}
+                                ; index as i"
+                            >
+                            <div class="col-11">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-{{item.uuid}}">
+                                        <div class="row accordion-button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + item.uuid">
+                                            <div class="col">{{item?.user?.name}}</div>
+                                            <div class="col">{{item?.user?.phone_number}}</div>
+                                            <div class="col">{{ item.total | to_kwanza }}</div>
+                                            <div class="col text-right">
+                                                <span *ngIf="item.status ==='Finalizado'" class="badge bg-success">{{item.status}}</span>
+                                                <span *ngIf="item.status ==='Confirmado'" class="badge bg-info">{{item.status}}</span>
+                                                <span *ngIf="item.status ==='Pendente'" class="badge bg-warning">{{item.status}}</span>
+                                                <span *ngIf="item.status ==='Cancelado'" class="badge bg-danger">{{item.status}}</span>
+                                            </div>
+                                            <div class="col"><strong>Entrega:</strong>{{item.expected_delivery_date | date}}</div>
+                                            <div class="col"><strong class="text-white">Registo:</strong> {{item.order_date | date}}</div>
+                                        </div>
+                                    </h2>
+        
+                                    <div id="collapse-{{item.uuid}}" class="accordion-collapse collapse" data-bs-parent="#accordionOrders">
+                                        <div class="accordion-body">
+        
+                                            <table class="table align-items-center table-striped">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th scope="col" class="sort">{{ 'Código' | translate}}</th>
+                                                        <th scope="col" class="sort">{{ 'table.name' | translate}}</th>
+                                                        <th scope="col" class="sort">{{ 'Quantidade' | translate}}</th>
+                                                        <th scope="col text-right" class="sort">{{ 'Preço de Venda' | translate}}</th>
+                                                        <th scope="col text-right" class="sort">{{ 'Total' | translate}}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list">
+                                                    <tr *ngFor="let line of item.products ; index as l">
+                                                        <td>{{ l + 1 }}</td>
+                                                        <th scope="row"><span class="name mb-0 text-sm">{{ line.product.code }}</span></th>
+                                                        <th scope="row"><span class="name mb-0 text-sm">{{ line.product.name}}</span></th>
+                                                        <th scope="row"><span class="name mb-0 text-sm">{{ line.quantity}}</span></th>
+                                                        <td class="budget text-right">{{ line.product.price | to_kwanza }}</td>
+                                                        <td class="budget text-right">{{ line.total | to_kwanza }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="nav-item me-1 dropdown" role="presentation">
+                                    <button 
+                                        class="btn btn-success mt-2 dropdown-toggle" 
+                                        data-bs-toggle="dropdown" 
+                                        aria-expanded="true"
+                                        type="button"
+                                        >
+                                        Opções
+                                    </button>
+
+                                    <div class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 41px, 0px);" data-popper-placement="bottom-start">
+                                        <button 
+                                            *ngIf="item.status ==='Confirmado'"
+                                            (click)="_finish( item )"
+
+                                            type="button" 
+                                            class="dropdown-item btn-info"
+                                            >
+                                            Finalizar
+                                        </button>
+
+                                        <button 
+                                            (click)="_confirm_location( item )"
+
+                                            type="button" 
+                                            class="dropdown-item btn-info"
+                                            >
+                                            Atualizar Endereço
+                                            <spinner [loading]="loading"></spinner>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <app-loading [loading]="this.loading"></app-loading>
+
+                    <div class='row justify-content-center'>
+                        <div class="col-5">
+                            <pagination-controls
+                                (pageChange)="_onTableDataChangePage($event)"
+                                previousLabel="Anterior"
+                                nextLabel="Proximo"
+                                >
+                            </pagination-controls>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
