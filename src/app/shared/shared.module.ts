@@ -11,12 +11,14 @@ import { FormatCurrencyPipe } from '../pipes/currency.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { urlPipe } from '../pipes/url.pipe';
+import { SafeHtmlPipe } from '../pipes/html_safe.pipe';
 
 
 
 @NgModule({
     declarations: [
         FormatCurrencyPipe,
+        SafeHtmlPipe,
         urlPipe,
         SpinnerComponent,
         LoadingComponent
@@ -27,6 +29,7 @@ import { urlPipe } from '../pipes/url.pipe';
     ],
     exports: [
         FormatCurrencyPipe,
+        SafeHtmlPipe,
         urlPipe,
         SpinnerComponent,
         LoadingComponent,

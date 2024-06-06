@@ -142,7 +142,7 @@
         </div>
     </div>
 
-    <div class="row project-items grid">
+    <div *ngIf="resume" class="row project-items grid">
         <!-- Single Project Begin -->
         <div *ngFor="let activity of resume.activities" class="col-lg-4 col-sm-6 grid-item sales business">
             <div class="single-project-item">
@@ -152,7 +152,7 @@
 
                 <div class="project-body">
                     <h3>{{ activity.name }}</h3>
-                    <p>{{ activity.description }}</p>
+                    <p><strong>Data:</strong> {{ activity.start_at | date }}</p>
                 </div>
             </div>
         </div>
