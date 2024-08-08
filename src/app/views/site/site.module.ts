@@ -7,6 +7,7 @@ import { NavbarComponent } from '../layout/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FooterComponent } from '../layout/footer/footer.component';
+import { OrganigramComponent } from './organigram/organigram.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FooterComponent } from '../layout/footer/footer.component';
     declarations: [ 
         HomeComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        OrganigramComponent
     ],
     providers: [
         

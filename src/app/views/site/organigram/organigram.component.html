@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<!-- CTA Begin -->
+<section class="gradient-bg pt-120 pb-120 mt-10" style="margin-top: 10%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="cta-content text-center text-white">
+                    <h2>Nossos quadros</h2>
+                    <p>
+                        Localizado no coração de nossa comunidade, destaca-se não apenas como um exemplo de excelência no escutismo, mas também como um pioneiro na integração de tecnologias digitais em suas atividades. Este texto explora como o Agrupamento 11 tem se tornado um modelo a ser seguido, combinando os valores tradicionais do escutismo com as oportunidades oferecidas pelo mundo digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA End -->
+
+<div class="container mt-5 mb-5">
+
+    <h2 class="text-center mb-5">Direção do Agrupamento</h2>
+    <div class="row justify-content-md-center">
+        <div *ngFor="let chefe of gestao" class="col-lg-2 col-sm-6 grid-item sales business">
+            <div class="single-project-item">
+                <div class="image">
+                    <img src="{{ chefe.picture }}" data-rjs="2" alt="">
+                </div>
+                <div class="project-body body-chef">
+                    <h4>{{ chefe.name }}</h4>
+                    <p class="text-position">{{chefe.position}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mb-5">Chefes de Unidades</h2>
+    <div class="row justify-content-md-center">
+        <div *ngFor="let chefe of chefes_unidades" class="col-lg-2 grid-item sales business">
+            <div class="single-project-item">
+                <div class="image">
+                    <img src="{{ chefe.picture }}" data-rjs="2" alt="">
+                </div>
+
+                <div class="project-body body-chef">
+                    <h4>{{ chefe.name }}</h4>
+                    <p class="text-position">{{chefe.position}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mb-5">Instrutores de Unidades / Serviços</h2>
+    <div class="row justify-content-md-center">
+        <div *ngFor="let chefe of instrutores" class="col-lg-2 grid-item sales business">
+            <div class="single-project-item">
+                <div class="image">
+                    <img src="{{ chefe.picture }}" data-rjs="2" alt="">
+                </div>
+
+                <div class="project-body body-chef">
+                    <h4>{{ chefe.name }}</h4>
+                    <p class="text-position">{{chefe.position}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
