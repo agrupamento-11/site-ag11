@@ -1,43 +1,27 @@
-<!-- Header Begin -->
-<header class="header fixed-top">
-    <!-- Header Style One Begin -->
-    <div class="fixed-top header-main style--one">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-sm-4 col-8">
-                    <!-- Logo Begin -->
-                    <div class="logo">
-                        <a href="/index.html">
-                            <img class="default-logo" src="assets/logo.jpeg" data-rjs="2" width="100">
-                            <img class="sticky-logo" src="assets/logo.jpeg" data-rjs="2" width="100">
-                        </a>
-                    </div>
-                    <!-- Logo End -->
-                </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo.jpeg" width="20" style="width: 80px!important">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: 0 solid transparent;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="col-lg-9 col-sm-8 col-4">
-                    <!-- Main Menu Begin -->
-                    <div class="main-menu d-flex align-items-center justify-content-end">
-                        <ul class="nav align-items-center">
-                            <li class="current-menu-item"><a href="#">Home</a></li>
-                            <li><a routerLink="/organigrama" href="#">Organigrama</a></li>
-                            <li><a href="#">Projectos</a></li>
-                            <li><a href="#">Áreas</a></li>
-                            <li><a href="#">Contactos</a></li>
-                        </ul>
-                        <!-- Offcanvas Holder Trigger -->
-                        <span class="offcanvas-trigger text-right d-none d-lg-block">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                        <!-- Offcanvas Trigger End -->
-                    </div>
-                    <!-- Main Menu ENd -->
-                </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/organigrama" href="#">Organigrama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Áreas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- Header Style One End -->
-</header>
-<!-- Header End -->
+</nav>
