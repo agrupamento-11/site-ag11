@@ -26,7 +26,7 @@ export class OrganigramComponent implements OnInit {
         },
         {
             picture: '/assets/img/dirigentes/default.png',
-            name: 'Elka Kay',
+            name: 'Isabel Bamba',
             position: 'Secretaria de Ag'
         },
         {
@@ -166,7 +166,7 @@ export class OrganigramComponent implements OnInit {
             picture: '/assets/img/dirigentes/default.png',
             name: 'Edgar Kay',
             position: 'Instrutor(a) 3ª Secção'
-        },        {
+        },{
             picture: '/assets/img/dirigentes/default.png',
             name: 'Olinto João',
             position: 'Instrutor(a) 3ª Secção'
@@ -174,15 +174,18 @@ export class OrganigramComponent implements OnInit {
             picture: '/assets/img/dirigentes/celma.png',
             name: 'Celma Luis',
             position: 'Instrutor(a) 3ª Secção'
-        },        {
+        },
+        {
             picture: '/assets/img/dirigentes/default.png',
-            name: 'Isabel Bamba',
+            name: 'Elka Kay',
             position: 'Instrutor(a) 3ª Secção'
-        },        {
+        },
+        {
             picture: '/assets/img/dirigentes/bengo.png',
             name: 'Alicerce Bengo',
             position: 'Instrutor(a) 3ª Secção'
-        },        {
+        },
+        {
             picture: '/assets/img/dirigentes/rosalina.png',
             name: 'Rosalina Pascoal',
             position: 'Instrutor(a) 3ª Secção'

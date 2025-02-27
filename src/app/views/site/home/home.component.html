@@ -523,17 +523,16 @@ Project End -->
             </div>
         </div>
 
-        <div class="row">
 
-
-            <div class="col-md-3">
-                <a href="https://res.cloudinary.com/dho7l0xan/image/upload/c_thumb,w_200,g_face/v1736232611/Relatorio_Financeiro_AG-11_2024.pdf" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/img/reports/report-2024.png" alt="RELATÓRIO E CONTAS - 2024">
-                    <p class="mt-2 text-center">RELATÓRIO E CONTAS - 2024</p>
+        <div class="row justify-content-md-center">
+            <div *ngFor="let report of reports" class="col-md-3">
+                <a href="{{ report.link }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ report.img }}" alt="{{ report.name }}">
+                    <p class="mt-2 text-center">{{ report.name }}</p>
                 </a>
             </div>
-
         </div>
+
     </div>
 </section>
 <!-- Blog End -->
