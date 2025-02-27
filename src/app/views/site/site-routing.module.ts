@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { OrganigramComponent } from './organigram/organigram.component';
+import { ReportComponent } from './reports/reports.component';
 
 const routes: Routes = [
 	{
@@ -12,6 +13,10 @@ const routes: Routes = [
 	{
 		path: 'organigrama',
 		component: OrganigramComponent
+	},
+	{
+		path: 'reports',
+		component: ReportComponent
 	},
 ];
 
